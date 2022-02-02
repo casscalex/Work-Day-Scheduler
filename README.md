@@ -20,4 +20,9 @@ THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
 
+# Link to deployed page
+https://casscalex.github.io/Work-Day-Scheduler/
+
 ![image](https://user-images.githubusercontent.com/91833883/152091162-7d3839b7-47e3-4e7b-b920-082277363010.png)
+
+
