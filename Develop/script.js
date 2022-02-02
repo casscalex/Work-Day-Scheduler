@@ -1,58 +1,26 @@
-// var currentDay = moment().format('dddd, MMMM Do');
-
-// $("#currentDay").text(currentDay);
 
 
-// function hourStatus(){
-//     var currentTime = moment().hour();
+// $(function () {});
+  
+var today = moment().format("dddd, MMMM Do");
+$("#currentDay").text(today);
 
-//     $(".time-block").each(function(){
-//     var timeBlock = parseInt($(this).attr("id"));
-   
+var currentTime = moment().format("h A");
 
-//     if(timeBlock < currentTime){
-//      $(this).addClass("past");
-//      $(this).removeClass("future");
-//      $(this).removeClass("present");
-//     }
+var tasks = [
+  { time: "9:00 AM", event: "" },
+  { time: "10:00 AM", event: "" },
+  { time: "11:00 AM", event: "" },
+  { time: "12:00 PM", event: "" },
+  { time: "1:00 PM", event: "" },
+  { time: "2:00 PM", event: "" },
+  { time: "3:00 PM", event: "" },
+  { time: "4:00 PM", event: "" },
+  { time: "5:00 PM", event: "" },
+];
 
-//     else if(timeBlock === currentTime){
-//      $(this).addClass("present");
-//      $(this).removeClass("past");
-//      $(this).removeClass("future");
-//     }
-
-//     else{
-//      $(this).addClass("future");
-//      $(this).removeClass("past");
-//      $(this).removeClass("present");
-//      }
-//     });
+var saveTasks = function() {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+}
 
 
-// };
-
-
-// function loadTasks(){
-//     for(var i = 9; i < 18; i++){
-//         $("#" + i + " .text").val(localStorage.getItem(i));
-//     }
-// };
-
-
-
-// $(".saveBtn").on("click", function(){
-// var hour = $(this).parent().attr("id");
-
-//     var inputText = $(this).siblings(".text").val();
-
-//     localStorage.setItem(hour, inputText);
-// });
-
-// loadTasks();
-
-// hourStatus();
-
-// setInterval(function() {
-//     hourStatus();
-// }, 60000);
